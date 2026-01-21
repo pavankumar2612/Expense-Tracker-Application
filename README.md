@@ -119,3 +119,25 @@ Contributions are welcome! Please follow these steps:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🐳 Docker Setup
+
+You can run the entire application (Frontend + Backend + MySQL) using Docker Compose.
+
+### Prerequisites
+- [Docker](https://www.docker.com/products/docker-desktop) installed and running.
+
+### Steps
+1. Navigate to the root directory of the project.
+2. Run the following command:
+   ```bash
+   docker-compose up --build
+   ```
+3. Access the application:
+   - **Frontend**: http://localhost:3000
+   - **Backend API**: http://localhost:8080/api
+
+### Service Details
+- **MySQL**: Runs on port 3307 (mapped from 3306) to avoid conflicts with local MySQL.
+- **Backend**: Runs on port 8080. Connected to the MySQL container.
+- **Frontend**: Runs on port 3000. Served via Nginx.
